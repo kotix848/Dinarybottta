@@ -1,3 +1,4 @@
+import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -156,6 +157,9 @@ async def help( ctx ):
 
 
 # connect
-token = 'NzI4OTg4NDYxOTg5NzU2OTk4.XwDPeg.p5M7kEnCnUfOJIrLBL-Nn3lcdR0'
+# token = 'NzI4OTg4NDYxOTg5NzU2OTk4.XwDPeg.p5M7kEnCnUfOJIrLBL-Nn3lcdR0'
 
-client.run(token)
+token = os.environ.get('BOT_TOKEN')
+
+
+
